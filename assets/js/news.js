@@ -43,11 +43,14 @@ const renderCarousel = async () => {
 
     const elCarCap = document.createElement('div')
     elCarCap.classList.add('carousel-caption','d-none','d-md-block')
-    const elCarCapTi = document.createElement('h5')
+    const elCarCapTi = document.createElement('h3')
+    elCarCapTi.innerHTML = dataArticle[i].title
     elCarCap.appendChild(elCarCapTi)
 
     console.log(dataArticle[i].title);
-    // elCarCapTi.innerHTML(dataArticle[i].title)
+    // elCarCapTi.innerHTML()
+
+    
 
     carouselItem.appendChild(elCarCap)
 
