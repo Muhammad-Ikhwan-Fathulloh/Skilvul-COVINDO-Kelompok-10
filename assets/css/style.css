@@ -31,6 +31,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
+
+
+/* Carousel */
+
+.carousel-item {
+  margin-top: 35px;
+  width: 100%;
+}
+
+.carousel-item img{
+  /* object-fit: cover; */
+  border-radius: 15px ;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -387,7 +406,7 @@ section {
   font-weight: 700;
   color: #012970;
 }
-.hero h2 {
+.hero p {
   color: #444444;
   margin: 15px 0 0 0;
   font-size: 26px;
