@@ -1,90 +1,103 @@
-// import { getNews } from './helpers.js';
+import {getNews} from './helper.js'
+// images
+const renderCarousel = async () => {
+  const elCarousel = document.querySelector("#carouselS");
+  const carouselInner = document.createElement("div");
+  carouselInner.classList.add("carousel-inner");
+
+  const news = await getNews()
+  let dataArticle = news.articles
 
 
-// // /**
-// //  *
-// //  * @param {String} thumbnail => url yang kita ambil menggunakan Unsplash API
-// //  * @param {Object} post => object post yang kita ambil dari jsonplaceholder API
-// //  * @returns DOM Element
-// //  */
 
-// const createCarouselElement = () => {
-//     // Element Carousel Indicator
-//     const elCarInBody = document.createElement("div")
-//     const elButCar1 = document.createElement("button")
-//     const elButCar2 = document.createElement("button")
-//     const elButCar3 = document.createElement("button")
-
-//     elCarInBody.classList.add("carousel-indicators")
-//     elCarInBody.appendChild(elButCar1)
-
-//     const elCarNerBody = document.createElement("div")
-//     const elCarConPrevBody = document.createElement('button')
-//     const elCarConNextBody = document.createElement('button')
-
-//     elButCar1.setAttribute("type","button")
-//     elButCar2.setAttribute("type","button")
-//     elButCar3.setAttribute("type","button")
-
-//     return elCarInBody
-
-// }
-
-// const RenderNews = ()=> {
-//     elCarousel.appendChild(createCarouselElement())
-// }
-
-// // RenderNews()
-
+  // Array.from(dataArticle).forEach(data => {
     
-
+  //   console.log(data.urlToImage);
     
+  // })
 
-//     const elCarNerBody = document.createElement("div")
-//     const elCarConPrevBody = document.createElement('button')
-//     const elCarConNextBody = document.createElement('button')
+  for (let i = 0; i < dataArticle.length; i++) {
+    // console.log(images[i]);
 
-   
-//     elButCar2.setAttribute("type","button")
-//     elButCar3.setAttribute("type","button")
+    const carouselItem = document.createElement("div");
 
-function Render() {
-    const elCarousel = document.querySelector("#carouselS")
-    const elP = document.createElement('p')
-    const elCarInBody = document.createElement("div");
-    const elCarInerBody = document.createElement('div')
+    carouselItem.classList.add("carousel-item");
 
-    elP.innerHTML='test'
-    elCarInerBody.classList.add('carousel-indicators')
-    const button1 = document.createElement('button')
-    const button2 = document.createElement('button')
-    const button3 = document.createElement('button')
+    if (i == 0) {
+      carouselItem.classList.add("active");
+    }
 
-    button1.setAttribute('type','button')
-    button2.setAttribute('type','button')
-    button3.setAttribute('type','button')
+    const image = document.createElement("img");
+    image.classList.add("w-100", "d-block","img-fluid");
+    image.setAttribute("src", dataArticle[i].urlToImage);
+    const aLink = document.createElement('a')
+    aLink.setAttribute("href",dataArticle[i].url)
+    aLink.setAttribute("target","_blank")
+    aLink.appendChild(image)
 
-    button1.setAttribute('data-bs-target','#carouselExampleIndicators')
-    button2.setAttribute('data-bs-target','#carouselExampleIndicators')
-    button3.setAttribute('data-bs-target','#carouselExampleIndicators')
 
-    button1.classList('active')
+    // <div class="carousel-caption d-none d-md-block">
+    //     <h5>Second slide label</h5>
+    //     <p>Some representative placeholder content for the second slide.</p>
+    //   </div>
 
-    elCarInerBody.appendChild(button1)
-    elCarInerBody.appendChild(button2)
-    elCarInerBody.appendChild(button3)
-   elCarInBody.appendChild(elCarInerBody)
-    // elCarInBody.classList.add("carousel-indicators")
+    const elCarCap = document.createElement('div')
+    elCarCap.classList.add('carousel-caption','d-none','d-md-block')
+    const elCarCapTi = document.createElement('h5')
+    elCarCap.appendChild(elCarCapTi)
+
+    console.log(dataArticle[i].title);
+    // elCarCapTi.innerHTML(dataArticle[i].title)
+
+    carouselItem.appendChild(elCarCap)
+
+    carouselItem.appendChild(aLink);
+
+
+
+    carouselInner.appendChild(carouselItem);
+  }
+
+  elCarousel.appendChild(carouselInner);
+};
+
+const Render = async () => {
+  const images = [
+    "https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80",
+    "https://media.istockphoto.com/photos/mount-hood-oregon-picture-id1268487061?s=612x612",
+    "https://media.istockphoto.com/photos/mount-hood-reflecting-in-trillium-lake-at-sunset-in-mount-hood-picture-id1284156839?s=612x612",
+  ];
+
+  // let news = await getNews()
+  // news.map(async(value)=>{
+  //   renderCarousel(value.urlToImage)
+  // })
+
+  
+
+  
+  // renderCarousel(images);
+  // const news = await getNews()
+  // let dataArticle = news.articles
+
+
+
+  // Array.from(dataArticle).forEach(data => {
     
-    // elCarInBody.appendChild(elButCar1)
-    // const elButCar1 = document.createElement('button')
-    // const elButCar2 = document.createElement("button")
-    // const elButCar3 = document.createElement("button")
+  //   console.log(data.urlToImage);
+    
+  // })
+  
 
-  elCarousel.appendChild(elP)
-  elCarousel.appendChild(elCarInBody);
+  await renderCarousel()
+  
+
+
+  
+
 }
 
 
-console.log('test');
-Render()
+
+Render();
+
