@@ -1,19 +1,17 @@
-import {getNews} from './helper.js'
+import { getNews } from "./helper.js";
 // images
 const renderCarousel = async () => {
   const elCarousel = document.querySelector("#carouselS");
   const carouselInner = document.createElement("div");
   carouselInner.classList.add("carousel-inner");
 
-  const news = await getNews()
-  let dataArticle = news.articles
-
-
+  const news = await getNews();
+  let dataArticle = news.articles;
 
   // Array.from(dataArticle).forEach(data => {
-    
+
   //   console.log(data.urlToImage);
-    
+
   // })
 
   for (let i = 0; i < dataArticle.length; i++) {
@@ -28,35 +26,30 @@ const renderCarousel = async () => {
     }
 
     const image = document.createElement("img");
-    image.classList.add("w-100", "d-block","img-fluid");
+    image.classList.add("w-100", "d-block", "img-fluid");
     image.setAttribute("src", dataArticle[i].urlToImage);
-    const aLink = document.createElement('a')
-    aLink.setAttribute("href",dataArticle[i].url)
-    aLink.setAttribute("target","_blank")
-    aLink.appendChild(image)
-
+    const aLink = document.createElement("a");
+    aLink.setAttribute("href", dataArticle[i].url);
+    aLink.setAttribute("target", "_blank");
+    aLink.appendChild(image);
 
     // <div class="carousel-caption d-none d-md-block">
     //     <h5>Second slide label</h5>
     //     <p>Some representative placeholder content for the second slide.</p>
     //   </div>
 
-    const elCarCap = document.createElement('div')
-    elCarCap.classList.add('carousel-caption','d-none','d-md-block')
-    const elCarCapTi = document.createElement('h3')
-    elCarCapTi.innerHTML = dataArticle[i].title
-    elCarCap.appendChild(elCarCapTi)
+    const elCarCap = document.createElement("div");
+    elCarCap.classList.add("carousel-caption", "d-none", "d-md-block");
+    const elCarCapTi = document.createElement("h3");
+    elCarCapTi.innerHTML = dataArticle[i].title;
+    elCarCap.appendChild(elCarCapTi);
 
     console.log(dataArticle[i].title);
     // elCarCapTi.innerHTML()
 
-    
-
-    carouselItem.appendChild(elCarCap)
+    carouselItem.appendChild(elCarCap);
 
     carouselItem.appendChild(aLink);
-
-
 
     carouselInner.appendChild(carouselItem);
   }
@@ -76,31 +69,17 @@ const Render = async () => {
   //   renderCarousel(value.urlToImage)
   // })
 
-  
-
-  
   // renderCarousel(images);
   // const news = await getNews()
   // let dataArticle = news.articles
 
-
-
   // Array.from(dataArticle).forEach(data => {
-    
+
   //   console.log(data.urlToImage);
-    
+
   // })
-  
 
-  await renderCarousel()
-  
-
-
-  
-
-}
-
-
+  await renderCarousel();
+};
 
 Render();
-
