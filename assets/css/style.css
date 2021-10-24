@@ -47,6 +47,25 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+.carousel-item a:link{
+  color: black;
+}
+
+/* visited link */
+.carousel-item a:visited {
+  color: blue;
+}
+
+/* mouse over link */
+.carousel-item a:hover {
+  color: white;
+}
+
+/* selected link */
+.carousel-item a:active {
+  color: blue;
+}
+
 
 
 
