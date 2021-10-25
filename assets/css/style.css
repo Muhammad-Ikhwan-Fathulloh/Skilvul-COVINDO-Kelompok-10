@@ -31,10 +31,51 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
+<<<<<<< HEAD
 .info {
   background-color: #f2f3f4;
 }
 
+=======
+
+
+/* Carousel */
+
+.carousel-item {
+  margin-top: 35px;
+  width: 100%;
+}
+
+.carousel-item img{
+  /* object-fit: cover; */
+  border-radius: 15px ;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-item a:link{
+  color: black;
+}
+
+/* visited link */
+.carousel-item a:visited {
+  color: blue;
+}
+
+/* mouse over link */
+.carousel-item a:hover {
+  color: white;
+}
+
+/* selected link */
+.carousel-item a:active {
+  color: blue;
+}
+
+
+
+
+>>>>>>> ed15ca1664f9d43c583e4dfe2a9c40893adc3216
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -391,7 +432,7 @@ section {
   font-weight: 700;
   color: #012970;
 }
-.hero h2 {
+.hero p {
   color: #444444;
   margin: 15px 0 0 0;
   font-size: 26px;
