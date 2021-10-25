@@ -33,16 +33,27 @@ const renderCarousel = async () => {
     aLink.setAttribute("target", "_blank");
     aLink.appendChild(image);
 
-    // <div class="carousel-caption d-none d-md-block">
-    //     <h5>Second slide label</h5>
-    //     <p>Some representative placeholder content for the second slide.</p>
-    //   </div>
+  // 1 <div class="carousel-caption d-none d-md-block">
+    //     2 <a href="https://getbootstrap.com/docs/5.1/components/carousel/" type="_blank">
+    //       3 <h5>Second slide label</h5>
+    //      2 </a>
+    //  1 </div>
 
+    // Step 1
     const elCarCap = document.createElement("div");
     elCarCap.classList.add("carousel-caption", "d-none", "d-md-block");
+
+    // Step 2
+    const aLink2 = document.createElement('a')
+    aLink2.setAttribute("href",dataArticle[i].url)
+    aLink2.setAttribute("target","_blank")
+    
+    // Step 3
     const elCarCapTi = document.createElement("h3");
     elCarCapTi.innerHTML = dataArticle[i].title;
-    elCarCap.appendChild(elCarCapTi);
+    aLink2.appendChild(elCarCapTi);
+
+    elCarCap.appendChild(aLink2)
 
     console.log(dataArticle[i].title);
     // elCarCapTi.innerHTML()
