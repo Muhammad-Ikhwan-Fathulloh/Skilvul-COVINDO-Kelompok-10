@@ -7,6 +7,7 @@ const renderCarousel = async () => {
 
   const news = await getNews();
   let dataArticle = news.articles;
+  console.log(dataArticle);
 
   // Array.from(dataArticle).forEach(data => {
 
@@ -55,7 +56,7 @@ const renderCarousel = async () => {
 
     elCarCap.appendChild(aLink2)
 
-    console.log(dataArticle[i].title);
+    // console.log(dataArticle[i].title);
     // elCarCapTi.innerHTML()
 
     carouselItem.appendChild(elCarCap);
