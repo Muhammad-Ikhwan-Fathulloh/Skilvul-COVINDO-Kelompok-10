@@ -31,6 +31,43 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.info {
+  background-color: #f2f3f4;
+}
+
+/* Carousel */
+
+.carousel-item {
+  margin-top: 35px;
+  width: 100%;
+}
+
+.carousel-item img{
+  /* object-fit: cover; */
+  border-radius: 15px ;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-item a:link{
+  color: white;
+}
+
+/* visited link */
+.carousel-item a:visited {
+  color: lightblue;
+}
+
+/* mouse over link */
+.carousel-item a:hover {
+  color: #717ff5;
+}
+
+/* selected link */
+.carousel-item a:active {
+  color: blue;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -387,7 +424,7 @@ section {
   font-weight: 700;
   color: #012970;
 }
-.hero h2 {
+.hero p {
   color: #444444;
   margin: 15px 0 0 0;
   font-size: 26px;
@@ -1225,13 +1262,13 @@ section {
   opacity: 0;
   border-radius: 4px;
   transition: 0.5s;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.651);
   z-index: 2;
 }
 .team .member .social a {
   transition: color 0.3s;
   color: rgba(1, 41, 112, 0.5);
-  margin: 15px 12px;
+  margin: 10px 40px;
   display: block;
   line-height: 0;
   text-align: center;
