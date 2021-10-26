@@ -1,4 +1,4 @@
-import { getNews } from "./helper.js";
+import { getNews,getNews2 } from "./helper.js";
 // images
 const renderCarousel = async () => {
   const elCarousel = document.querySelector("#carouselS");
@@ -90,6 +90,10 @@ const Render = async () => {
   //   console.log(data.urlToImage);
 
   // })
+
+  const news2 = await getNews2()
+
+  console.log(news2,'==============TTEST===========');
 
   await renderCarousel();
 };
