@@ -31,14 +31,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .info {
   background-color: #f2f3f4;
 }
-
-=======
-
 
 /* Carousel */
 
@@ -55,17 +50,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item a:link{
-  color: black;
+  color: white;
 }
 
 /* visited link */
 .carousel-item a:visited {
-  color: blue;
+  color: lightblue;
 }
 
 /* mouse over link */
 .carousel-item a:hover {
-  color: white;
+  color: #717ff5;
 }
 
 /* selected link */
@@ -73,12 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   color: blue;
 }
 
-
-
-
->>>>>>> ed15ca1664f9d43c583e4dfe2a9c40893adc3216
-=======
->>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -435,11 +424,7 @@ section {
   font-weight: 700;
   color: #012970;
 }
-<<<<<<< HEAD
 .hero p {
-=======
-.hero h2 {
->>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
   color: #444444;
   margin: 15px 0 0 0;
   font-size: 26px;
@@ -1277,21 +1262,13 @@ section {
   opacity: 0;
   border-radius: 4px;
   transition: 0.5s;
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.651);
-=======
-  background: rgba(255, 255, 255, 0.3);
->>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
   z-index: 2;
 }
 .team .member .social a {
   transition: color 0.3s;
   color: rgba(1, 41, 112, 0.5);
-<<<<<<< HEAD
   margin: 10px 40px;
-=======
-  margin: 15px 12px;
->>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
   display: block;
   line-height: 0;
   text-align: center;
