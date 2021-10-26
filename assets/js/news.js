@@ -56,7 +56,11 @@ const renderCarousel = async () => {
 
     elCarCap.appendChild(aLink2)
 
+<<<<<<< HEAD
     // console.log(dataArticle[i].title);
+=======
+    console.log(dataArticle[i].title);
+>>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
     // elCarCapTi.innerHTML()
 
     carouselItem.appendChild(elCarCap);
@@ -91,10 +95,13 @@ const Render = async () => {
 
   // })
 
+<<<<<<< HEAD
   const news2 = await getNews2()
 
   console.log(news2,'==============TTEST===========');
 
+=======
+>>>>>>> 4cfde042bd65e6b68d7873588e9023b724bf4ed1
   await renderCarousel();
 };
 
