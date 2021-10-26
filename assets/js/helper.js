@@ -13,8 +13,18 @@ export const getNews = async () => {
     }
 };
 
-export const getHospital = async() => {
-    // EDIT HERE
+export const getNews2 = async() => {
+    try {
+        const news2 = await fetch(
+            'https://api-berita-indonesia.vercel.app/cnbc/terbaru'
+        ).then((respone) =>respone.json())
+
+        
+        return news2
+        
+    } catch (error) {
+        
+    }
 };
 
 export const getMaps = async() => {
