@@ -6,64 +6,10 @@ const renderCarousel = async () => {
   carouselInner.classList.add("carousel-inner");
 
   const news = await getNews2();
-  let dataArticle = news.data.posts;
+  let dataArticle = news.data.posts
   console.log(dataArticle);
 
-  // Array.from(dataArticle).forEach(data => {
-
-  //   console.log(data.urlToImage);
-
-  // })
-
-  // dataArticle.map((data)=>{
-    
-  //   const carouselItem = document.createElement("div");
-
-  //   carouselItem.classList.add("carousel-item");
-
-  //   // if (i == 0) {
-  //   //   carouselItem.classList.add("active");
-  //   // }
-
-  //   const image = document.createElement("img");
-  //   image.classList.add("w-100", "d-block", "img-fluid");
-  //   image.setAttribute("src", data.thumbnail);
-  //   const aLink = document.createElement("a");
-  //   aLink.setAttribute("href", data.link);
-  //   aLink.setAttribute("target", "_blank");
-  //   aLink.appendChild(image);
-
-  // // 1 <div class="carousel-caption d-none d-md-block">
-  //   //     2 <a href="https://getbootstrap.com/docs/5.1/components/carousel/" type="_blank">
-  //   //       3 <h5>Second slide label</h5>
-  //   //      2 </a>
-  //   //  1 </div>
-
-  //   // Step 1
-  //   const elCarCap = document.createElement("div");
-  //   elCarCap.classList.add("carousel-caption", "d-none", "d-md-block");
-
-  //   // Step 2
-  //   const aLink2 = document.createElement('a')
-  //   aLink2.setAttribute("href",data.link)
-  //   aLink2.setAttribute("target","_blank")
-    
-  //   // Step 3
-  //   const elCarCapTi = document.createElement("h3");
-  //   elCarCapTi.innerHTML = data.title;
-  //   aLink2.appendChild(elCarCapTi);
-
-  //   elCarCap.appendChild(aLink2)
-
-  //   // console.log(dataArticle[i].title);
-  //   // elCarCapTi.innerHTML()
-
-  //   carouselItem.appendChild(elCarCap);
-
-  //   carouselItem.appendChild(aLink);
-
-  //   carouselInner.appendChild(carouselItem);
-  // })
+ 
   for (let i = 0; i < dataArticle.length; i++) {
     // console.log(images[i]);
 
