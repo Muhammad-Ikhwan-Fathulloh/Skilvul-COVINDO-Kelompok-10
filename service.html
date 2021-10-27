@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>COVINDO | Kontak Layanan</title>
-    <link rel="shortcut icon" type="image/png" href="assets/images/covindo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/covindo-logo.png">
     <meta content="" name="description">
 
     <meta content="" name="keywords">
@@ -28,6 +28,7 @@
     <link class="js-stylesheet" href="assets/css/light.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="stylesheet" href="assets/css/leafleat.css">
+    <link rel="canonical" href="https://appstack.bootlab.io/tables-datatables-responsive.html" />
     <!-- =======================================================
   * Template Name: FlexStart - v1.7.0
   * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
@@ -76,7 +77,8 @@
                     <div class="card">
 
                         <div class="card-body">
-                            <table id="datatables-reponsive" class="table table-striped" style="width:100%">
+                            <div class="table-responsive">
+                            <table id="datatables-reponsive" class="table table-striped-info" style="width:100%">
                                 <thead style="background-color:#F8F9FA">
                                     <tr>
                                         <th scope="col" style="font-weight:400">No.</th>
@@ -187,6 +189,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -270,7 +273,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             // Datatables Responsive
             $("#datatables-reponsive").DataTable({
-                responsive: true
+                responsive: false
             });
         });
     </script>
