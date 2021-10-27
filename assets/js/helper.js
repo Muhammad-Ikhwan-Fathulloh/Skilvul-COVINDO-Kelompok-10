@@ -16,7 +16,7 @@ export const getNews = async () => {
 export const getNews2 = async() => {
     try {
         const news2 = await fetch(
-            'https://api-berita-indonesia.vercel.app/cnbc/terbaru'
+            'https://api-berita-indonesia.vercel.app/cnn/teknologi'
         ).then((respone) =>respone.json())
 
         

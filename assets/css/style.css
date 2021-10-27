@@ -31,13 +31,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
-<<<<<<< HEAD
 .info {
   background-color: #f2f3f4;
 }
-
-=======
-
 
 /* Carousel */
 
@@ -54,17 +50,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item a:link{
-  color: black;
+  color: white;
 }
 
 /* visited link */
 .carousel-item a:visited {
-  color: blue;
+  color: lightblue;
 }
 
 /* mouse over link */
 .carousel-item a:hover {
-  color: white;
+  color: #717ff5;
 }
 
 /* selected link */
@@ -72,10 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   color: blue;
 }
 
-
-
-
->>>>>>> ed15ca1664f9d43c583e4dfe2a9c40893adc3216
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
