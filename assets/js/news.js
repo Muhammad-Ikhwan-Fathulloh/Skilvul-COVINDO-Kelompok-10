@@ -17,7 +17,7 @@ const renderCarousel = async () => {
 
     carouselItem.classList.add("carousel-item");
 
-    if (i == 1) {
+    if (i == 0) {
       carouselItem.classList.add("active");
     }
 
