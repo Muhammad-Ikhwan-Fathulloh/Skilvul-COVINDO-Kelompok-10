@@ -1,19 +1,15 @@
-import { getNews } from "./helper.js";
+import { getNews,getNews2 } from "./helper.js";
 // images
 const renderCarousel = async () => {
   const elCarousel = document.querySelector("#carouselS");
   const carouselInner = document.createElement("div");
   carouselInner.classList.add("carousel-inner");
 
-  const news = await getNews();
-  let dataArticle = news.articles;
+  const news = await getNews2();
+  let dataArticle = news.data.posts
+  console.log(dataArticle);
 
-  // Array.from(dataArticle).forEach(data => {
-
-  //   console.log(data.urlToImage);
-
-  // })
-
+ 
   for (let i = 0; i < dataArticle.length; i++) {
     // console.log(images[i]);
 
@@ -27,9 +23,9 @@ const renderCarousel = async () => {
 
     const image = document.createElement("img");
     image.classList.add("w-100", "d-block", "img-fluid");
-    image.setAttribute("src", dataArticle[i].urlToImage);
+    image.setAttribute("src", dataArticle[i].thumbnail);
     const aLink = document.createElement("a");
-    aLink.setAttribute("href", dataArticle[i].url);
+    aLink.setAttribute("href", dataArticle[i].link);
     aLink.setAttribute("target", "_blank");
     aLink.appendChild(image);
 
@@ -45,7 +41,7 @@ const renderCarousel = async () => {
 
     // Step 2
     const aLink2 = document.createElement('a')
-    aLink2.setAttribute("href",dataArticle[i].url)
+    aLink2.setAttribute("href",dataArticle[i].link)
     aLink2.setAttribute("target","_blank")
     
     // Step 3
@@ -55,7 +51,7 @@ const renderCarousel = async () => {
 
     elCarCap.appendChild(aLink2)
 
-    console.log(dataArticle[i].title);
+    // console.log(dataArticle[i].title);
     // elCarCapTi.innerHTML()
 
     carouselItem.appendChild(elCarCap);
@@ -89,6 +85,10 @@ const Render = async () => {
   //   console.log(data.urlToImage);
 
   // })
+
+  const news2 = await getNews2()
+
+  console.log(news2,'==============TTEST===========');
 
   await renderCarousel();
 };

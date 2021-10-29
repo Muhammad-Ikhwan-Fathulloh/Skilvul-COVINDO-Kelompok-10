@@ -51,7 +51,7 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top bg-white">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <div class="container container-xl d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center">
                 <img src="assets/images/covindo.png" alt="logocovindo" style="height:200px; width: 200px;">
@@ -1323,7 +1323,7 @@
             var div = '<div class="container  text-center" style="background-color:#EB5156;color:white;padding:15px 0px 15px 0px;font-weight:600;">' + data.Provinsi + ' berada dalam Zona Merah. Anda dianjurkan untuk tetap dirumah, atau tidak mendatangi daerah ini</div>';
             document.getElementById("warning").innerHTML = div;
         } else if (data.Kasus_Posi > 1) {
-            var div = '<div class="container text-center" style="background-color:#EDEF4D;color:white;padding:15px 0px 15px 0px;font-weight:600;">' + data.Provinsi + ' berada dalam Zona Kuning. Anda dianjurkan untuk tidak mendatangi daerah ini kecuali dengan alasan darurat</div>';
+            var div = '<div class="container text-center" style="background-color:#EDEF4D;color:black;padding:15px 0px 15px 0px;font-weight:600;">' + data.Provinsi + ' berada dalam Zona Kuning. Anda dianjurkan untuk tidak mendatangi daerah ini kecuali dengan alasan darurat</div>';
             document.getElementById("warning").innerHTML = div;
         } else if (data.Kasus_Posi == 0) {
             var div = '<div class="container text-center" style="background-color:#61BC6B;color:white;padding:15px 0px 15px 0px;font-weight:600;">' + data.Provinsi + ' berada dalam Zona Hijau. Anda dapat beraktivitas seperti biasa namun tetap menjaga protokol kesehatan</div>';
